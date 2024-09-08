@@ -16,7 +16,7 @@ function createGrid(size) {
     blackOverlay.style["opacity"] = "0";
     cell.appendChild(blackOverlay);
 
-    cell.addEventListener("mouseover", (e) => {
+    blackOverlay.addEventListener("mouseover", (e) => {
       if (cell.classList.contains("colored")) {
         let currentOpacity = Number(blackOverlay.style["opacity"]);
         blackOverlay.style["opacity"] = Math.min(currentOpacity + 0.1, 1);
